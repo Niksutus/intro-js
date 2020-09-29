@@ -1,8 +1,18 @@
 (function($) {
 
-	'use strict';
+  'use strict';
+  
+  // Making the pop-up visible
 
-	// bootstrap dropdown hover
+  document.addEventListener('mouseleave', function(){
+    document.getElementById('popup1').style.visibility = 'visible';
+  });
+
+  document.querySelector('#popup1 .popup .close').addEventListener('click',function(){
+    document.getElementById('popup1').classList.remove('show');
+  });
+
+  // bootstrap dropdown hover
 
   // loader
   var loader = function() {
